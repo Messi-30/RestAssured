@@ -1,0 +1,94 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "id": 1,
+                "name": "The Russian",
+                "type": "fiction",
+                "available": true
+            },
+            {
+                "id": 2,
+                "name": "Just as I Am",
+                "type": "non-fiction",
+                "available": false
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "id": 1,
+                        "name": "The Russian",
+                        "type": "fiction",
+                        "available": true
+                    }
+                ],
+                "required": [
+                    "id",
+                    "name",
+                    "type",
+                    "available"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "name": {
+                        "$id": "#/items/anyOf/0/properties/name",
+                        "type": "string",
+                        "title": "The name schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "The Russian"
+                        ]
+                    },
+                    "type": {
+                        "$id": "#/items/anyOf/0/properties/type",
+                        "type": "string",
+                        "title": "The type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "fiction"
+                        ]
+                    },
+                    "available": {
+                        "$id": "#/items/anyOf/0/properties/available",
+                        "type": "boolean",
+                        "title": "The available schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": false,
+                        "examples": [
+                            true
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

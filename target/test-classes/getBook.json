@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "id": 1,
+                "name": "The Russian",
+                "author": "James Patterson and James O. Born",
+                "isbn": "1780899475",
+                "type": "fiction",
+                "price": 12.98,
+                "current-stock": 12,
+                "available": true
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "id": 1,
+                        "name": "The Russian",
+                        "author": "James Patterson and James O. Born",
+                        "isbn": "1780899475",
+                        "type": "fiction",
+                        "price": 12.98,
+                        "current-stock": 12,
+                        "available": true
+                    }
+                ],
+                "required": [
+                    "id",
+                    "name",
+                    "author",
+                    "isbn",
+                    "type",
+                    "price",
+                    "current-stock",
+                    "available"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "name": {
+                        "$id": "#/items/anyOf/0/properties/name",
+                        "type": "string",
+                        "title": "The name schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "The Russian"
+                        ]
+                    },
+                    "author": {
+                        "$id": "#/items/anyOf/0/properties/author",
+                        "type": "string",
+                        "title": "The author schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "James Patterson and James O. Born"
+                        ]
+                    },
+                    "isbn": {
+                        "$id": "#/items/anyOf/0/properties/isbn",
+                        "type": "string",
+                        "title": "The isbn schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "1780899475"
+                        ]
+                    },
+                    "type": {
+                        "$id": "#/items/anyOf/0/properties/type",
+                        "type": "string",
+                        "title": "The type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "fiction"
+                        ]
+                    },
+                    "price": {
+                        "$id": "#/items/anyOf/0/properties/price",
+                        "type": "number",
+                        "title": "The price schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            12.98
+                        ]
+                    },
+                    "current-stock": {
+                        "$id": "#/items/anyOf/0/properties/current-stock",
+                        "type": "integer",
+                        "title": "The current-stock schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            12
+                        ]
+                    },
+                    "available": {
+                        "$id": "#/items/anyOf/0/properties/available",
+                        "type": "boolean",
+                        "title": "The available schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": false,
+                        "examples": [
+                            true
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "id": "U3dIuVXpDC6iHgKxqzRJ8",
+                "bookId": 3,
+                "createdBy": "eadd5a316591c6194c4ba2f9fc1c9114e26ea34593a1a7097fa4383b3dd16a7c",
+                "quantity": 1,
+                "timestamp": 1637245586589
+            },
+            {
+                "id": "uKqMFFCi_zHPHDBpqGh3e",
+                "bookId": 3,
+                "createdBy": "eadd5a316591c6194c4ba2f9fc1c9114e26ea34593a1a7097fa4383b3dd16a7c",
+                "quantity": 1,
+                "timestamp": 1637246669457
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "id": "U3dIuVXpDC6iHgKxqzRJ8",
+                        "bookId": 3,
+                        "createdBy": "eadd5a316591c6194c4ba2f9fc1c9114e26ea34593a1a7097fa4383b3dd16a7c",
+                        "quantity": 1,
+                        "timestamp": 1637245586589
+                    }
+                ],
+                "required": [
+                    "id",
+                    "bookId",
+                    "createdBy",
+                    "quantity",
+                    "timestamp"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "string",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "U3dIuVXpDC6iHgKxqzRJ8"
+                        ]
+                    },
+                    "bookId": {
+                        "$id": "#/items/anyOf/0/properties/bookId",
+                        "type": "integer",
+                        "title": "The bookId schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            3
+                        ]
+                    },
+                    "createdBy": {
+                        "$id": "#/items/anyOf/0/properties/createdBy",
+                        "type": "string",
+                        "title": "The createdBy schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "eadd5a316591c6194c4ba2f9fc1c9114e26ea34593a1a7097fa4383b3dd16a7c"
+                        ]
+                    },
+                    "quantity": {
+                        "$id": "#/items/anyOf/0/properties/quantity",
+                        "type": "integer",
+                        "title": "The quantity schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "timestamp": {
+                        "$id": "#/items/anyOf/0/properties/timestamp",
+                        "type": "integer",
+                        "title": "The timestamp schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1637245586589
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
